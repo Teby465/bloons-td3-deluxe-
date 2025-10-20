@@ -1,0 +1,41 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+
+android {
+    // La SDK de compilación 35 es de vista previa. Es mejor usar una estable como la 34 por ahora.
+    compileSdk 34
+    namespace "com.ninjakiwi.bloonstd3.android.remake"
+
+    defaultConfig {
+        applicationId "com.ninjakiwi.bloonstd3.android.remake"
+        minSdk 21
+        // La targetSdk debe coincidir con la compileSdk.
+        targetSdk 34
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    // Asegúrate de que las opciones de Kotlin también estén presentes si usas Kotlin.
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+}
+
+dependencies {
+    implementation 'androidx.core:core-ktx:1.13.1'
+    implementation 'androidx.appcompat:appcompat:1.7.0'
+    implementation 'com.google.android.material:material:1.12.0'
+}

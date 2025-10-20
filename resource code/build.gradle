@@ -1,0 +1,63 @@
+plugins {
+    id 'com.android.application'
+    id 'org.jetbrains.kotlin.android'
+}
+
+// Bloque de configuración principal de Android
+android {
+    targetSdk 35
+    compileSdk 35
+    namespace "com.ninjakiwi.bloonstd3.android.remake"
+
+    defaultConfig {
+        applicationId "com.ninjakiwi.bloonstd3.android.remake"
+        minSdk 21
+        
+        // --- PIEZAS QUE FALTABAN ---
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    // --- BLOQUE NUEVO: Build Types ---
+    buildTypes {
+        release {
+            minifyEnabled true // Reduce y ofusca el código para la versión de lanzamiento
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    
+    // --- BLOQUE NUEVO: Opciones de Compilación ---
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+
+// --- BLOQUE NUEVO Y CRÍTICO: Dependencias ---
+dependencies {
+    // Librerías básicas que toda app de Android necesita
+    implementation 'androidx.core:core-ktx:1.13.1'
+    implementation 'androidx.appcompat:appcompat:1.7.0'
+    implementation 'com.google.android.material:material:1.12.0'
+
+    // Aquí se añadirían librerías para juegos, gráficos, sonido, etc.
+}
+pluginManagement {
+    repositories {        google()
+        mavenCentral()
+        gradlePluginPortal()
+    }
+}
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        google()
+        mavenCentral()
+    }
+}
+
+rootProject.name = "bloons td3.android"
+// Asegúrate de que el nombre del módulo coincida con tu estructura de carpetas.
+// Si tu código está en 'resource code', el 'include' debería ser así:
+include ':resource code'

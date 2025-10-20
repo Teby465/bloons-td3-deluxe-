@@ -1,0 +1,46 @@
+{
+  "levels": {
+    "snow": [
+      "assets/snow1.png",
+      "assets/snow2.png",
+      "assets/snow3.png"
+    ],
+    "beach": [
+      "assets/beach1.png",
+      "assets/beach2.png",
+      "assets/beach3.png"
+    ],
+    "racing": [
+      "assets/racing1.png",
+      "assets/racing2.png",
+      "assets/racing3.png"
+    ],
+    "classic": [
+      "assets/classic1.png",
+      "assets/classic2.png",
+      "assets/classic3.png"
+    ],
+    "classic2": [
+      "assets/classic21.png",
+      "assets/classic22.png",
+      "assets/classic23.png"
+    ]
+  },
+  "images": {
+    "icon": "assets/Icon.png",
+    "intro_sprite": "assets/IntroSprite.png",
+    "in_game_sprites": "assets/in_game_sprites.png",
+    "front_end_sprites": "assets/front_end_sprites.png"
+  },
+  "sounds": {
+    "main_theme": "audio/btd_main.mp3",
+    "pop_effects": [
+      "audio/pop1.wav",
+      "audio/pop2.wav",
+      "audio/pop3.wav",
+      "audio/pop4.wav"
+    ],
+    "explosion": "audio/splosion.wav",
+    "ice_explosion": "audio/iceexplosion.wav"
+  }
+}

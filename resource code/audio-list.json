@@ -1,0 +1,11 @@
+{
+  "sounds": [
+    "audio/btd_main.mp3",
+    "audio/pop1.wav",
+    "audio/pop2.wav",
+    "audio/pop3.wav",
+    "audio/pop4.wav",
+    "audio/splosion.wav",
+    "audio/iceexplosion.wav"
+  ]
+}
